@@ -1,52 +1,605 @@
-<!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Eric Brachmann</title>
-  
-  <meta name="author" content="Eric Brachmann">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
-</head>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          crossorigin="anonymous">
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css
+          integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="assets/fav_icon.png">
 
-<body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Eric Brachmann</name>
-              </p>
-              <p>I am a staff scientist at <a href="https://research.nianticlabs.com/">Niantic</a>. Not much to see here for the moment. Be sure to visit again from time to time.
-              </p>
-              <p style="text-align:center">
-                <a href="mailto:ericbrachmann@gmail.com">Email</a> &nbsp/&nbsp
-                <a href="https://scholar.google.de/citations?user=cAIshsYAAAAJ">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://twitter.com/eric_brachmann">Twitter</a>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/eric_casual.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/eric_casual.jpg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
+    <title>Eric Brachmann</title>
+  </head>
+  <body>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:right;font-size:small;">
-                Website template credit: <a href="https://jonbarron.info/">Jon Barron</a>.
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
-</body>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-sm-0 col-md-1"></div>
+        <div class="col-sm-12 col-md-3 mb-3">
+          <img src="assets/eric_casual.jpg" class="rounded img-fluid">
+          <h1 class="mt-3">Eric Brachmann</h1>
+          <p class="mt-1">
+            I am a staff scientist at <a href="https://research.nianticlabs.com/">Niantic</a>,
+            working on the Lightship <a href="https://lightship.dev/products/vps">Visual Positioning System</a> (VPS).
+            I work at the intersection of machine learning and computer vision, 3D vision in particular. My research revolves around
+            topics such as visual relocalisation, pose estimation, end-to-end learning, robust optimization and feature
+            matching.
+          </p>
+          <p>
+            I publish my research in the top conferences in computer vision where I am also an active reviewer with
+            several outstanding reviewer mentions. I co-organized several tutorials and workshops on visual
+            relocalisation and object pose estimation.
+          </p>
+          <a href="mailto:ericbrachmann@gmail.com" class="btn btn-black w-100 text-start ps-0"><i class="fa-solid fa-envelope"></i> E-Mail</a>
+          <a href="https://scholar.google.de/citations?user=cAIshsYAAAAJ" class="btn btn-black w-100 text-start ps-0"><i class="ai ai-google-scholar"></i> Google Scholar</a>
+          <a href="https://twitter.com/eric_brachmann" class="btn btn-black w-100 text-start ps-0"><i class="fa-brands fa-twitter"></i> Twitter</a>
+          <a href="https://www.linkedin.com/in/eric-brachmann/" class="btn btn-black w-100 text-start ps-0"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <div class="col-sm-12 col-md-6">
 
+          <ul class="nav nav-tabs nav-fill mb-4" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="highlights-tab" data-bs-toggle="tab" data-bs-target="#highlights-tab-pane" type="button" role="tab" aria-controls="highlights-tab-pane" aria-selected="true">Research Highlights</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab" aria-controls="all-tab-pane" aria-selected="false">All Publications</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="highlights-tab-pane" role="tabpanel" aria-labelledby="highlights-tab" tabindex="0">
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Map-Free Visual Relocalization: Metric Pose Relative to a Single Image <span class="badge bg-secondary mx-1">ECCV 2022</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Eduardo Arnold, Jamie Wynn, Sara Vicente, Guillermo Garcia-Hernando, Aron Monszpart, Victor Prisacariu, Daniyar Turmukhambetov, <span class="text-white">Eric Brachmann</span></p>
+                  <p class="card-text mt-2">TL;DR: only one mapping image and one query, dataset with multiple hundred outdoor scenes, benchmark and online leaderboard </p>
+                  <a href="https://arxiv.org/abs/2210.05494" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://storage.cloud.google.com/niantic-lon-static/research/map-free-reloc/MapFreeReloc-ECCV22-supplemental.pdf" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-file-pdf"></i> supplement</a>
+                  <a href="https://research.nianticlabs.com/mapfree-reloc-benchmark" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://github.com/nianticlabs/map-free-reloc" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                  <a href="https://research.nianticlabs.com/mapfree-reloc-benchmark/dataset" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-images"></i> dataset</a>
+                  <a href="https://storage.googleapis.com/niantic-lon-static/research/map-free-reloc/4029.mp4" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_mapfree.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Visual Camera Re-localization From RGB and RGB-D Images using DSAC <span class="badge bg-secondary mx-1">TPAMI 2021</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: DSAC*, higher accuracy than DSAC++ and full depth support, 28MB standard maps, 4MB tiny maps </p>
+                  <a href="https://arxiv.org/abs/2002.12324" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://github.com/vislearn/dsacstar" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_dsacstar.mp4" type="video/mp4">
+                </video>
+              </div>
+
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">On the Limits of Pseudo Ground Truth in Visual Camera Re-localisation <span class="badge bg-secondary mx-1">ICCV 2021</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Martin Humenberger, Carsten Rother, Torsten Sattler</p>
+                  <p class="card-text mt-2">TL;DR: the choice of algorithm to generate reference poses, SfM or D-SLAM, has large impact on the ranking or relocalizers</p>
+                  <a href="https://arxiv.org/abs/2109.00524" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://github.com/tsattler/visloc_pseudo_gt_limitations" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                  <a href="https://storage.googleapis.com/niantic-lon-static/research/limits-of-pgt/iccv21_pgt_high.mp4" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_pseudogt.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Reinforced Feature Points: Optimizing Feature Detection and Description for a High-Level Task <span class="badge bg-secondary mx-1">CVPR 2020</span><span class="badge bg-secondary mx-1"><i class="fa-solid fa-star"></i> oral</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Aritra Bhowmik, Stefan Gumhold, Carsten Rother, <span class="text-white">Eric Brachmann</span></p>
+                  <p class="card-text mt-2">TL;DR: refine SuperPoint end-to-end for relative pose estimation, gradients of feature matching wrt feature descriptors and key point heatmap</p>
+                  <a href="https://arxiv.org/abs/1912.00623" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://github.com/aritra0593/Reinforced-Feature-Points" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                  <a href="https://www.youtube.com/watch?v=_Zbbvr5jGhQ" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <img src="assets/web_refp.png" class="card-img-bottom w-100">
+              </div>
+
+
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Neural-Guided RANSAC: Learning Where to Sample Model Hypothesis<span class="badge bg-secondary mx-1">ICCV 2019</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: NG-RANSAC + NG-DSAC, gradients of RANSAC-fitted model wrt quality of data points, applied to E/F matrix fitting, horizon line estimation and camera relocalization</p>
+                  <a href="https://arxiv.org/abs/1905.04132" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/neural-guided-ransac/" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://github.com/vislearn/ngransac/" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> F/E matrix code</a>
+                  <a href="https://github.com/vislearn/ngdsac_horizonC" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> horizon line code</a>
+                  <a href="https://github.com/vislearn/ngdsac_camreloc" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> relocalisation code</a>
+                  <a href="https://www.youtube.com/watch?v=ehaZ7FhDNS0" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_ngransac.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">BOP: Benchmark for 6D Object Pose Estimation<span class="badge bg-secondary mx-1">ECCV 2018</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Tomas Hodan, Frank Michel, <span class="text-white">Eric Brachmann</span>, Wadim Kehl, Anders Buch, Dirk Kraft, Bertram Drost, Joel Vidal, Stephan Ihrke , Xenophon Zabulis, Caner Sahin, Fabian Manhardt, Federico Tombari, Tae-Kyun Kim, Jiri Matas, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: de facto standard benchmark for instance pose estimation, unifying dataset formats and proposing evaluation metrics, ongoing competition with online leaderboard</p>
+                  <a href="https://arxiv.org/abs/1808.08319" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="http://bop.felk.cvut.cz/home/" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                </div>
+                <img src="assets/web_bop.png" class="card-img-bottom w-100 bg-white">
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Learning Less is More - 6D Camera Localization via 3D Surface Regression <span class="badge bg-secondary mx-1">CVPR 2018</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: DSAC++, first time training scene coordinate regression without depth, differentiable PnP”</p>
+                  <a href="https://arxiv.org/abs/1611.05705" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#CVPR18" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://github.com/vislearn/LessMore" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                  <a href="https://www.youtube.com/watch?v=DjJFRTFEUq0" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_cvpr18.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">DSAC - Differentiable RANSAC for Camera Localization <span class="badge bg-secondary mx-1">CVPR 2017</span><span class="badge bg-secondary mx-1"><i class="fa-solid fa-star"></i> oral</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Alexander Krull, Sebastian Nowozin, Jamie Shotton, Frank Michel, Stefan Gumhold, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: gradients of a RANSAC-fitted model wrt the coordinates of the input points, using policy gradient on discrete hypothesis selection</p>
+                  <a href="https://arxiv.org/abs/1611.05705" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#DSAC" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://github.com/vislearn/DSACLine" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> toy code</a>
+                  <a href="https://github.com/cvlab-dresden/DSAC" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> relocalisation code</a>
+                  <a href="https://www.youtube.com/watch?v=YWSGq7CUSRA" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_dsac.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Learning 6D Object Pose Estimation using 3D Object Coordinates <span class="badge bg-secondary mx-1">ECCV 2014</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Alexander Krull, Frank Michel, Stefan Gumhold, Jamie Shotton, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: introduces dense image-to-object correspondences as a learnable intermediate representation, introduced the LINEMOD-Occlusion dataset</p>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/wp-content/uploads/2017/11/eccv14_6dpose.pdf" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-file-pdf"></i> paper</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/wp-content/uploads/2017/11/eccv14_6dpose_supp.pdf" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-file-pdf"></i> supplement</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#ECCV14" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://bop.felk.cvut.cz/datasets/#LM-O" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-images"></i> dataset</a>
+                  <a href="https://www.youtube.com/watch?v=yk1m3DsH4dA" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video 1</a>
+                  <a href="https://www.youtube.com/watch?v=TKuJr3EIT-8" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video 2</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_eccv14.mp4" type="video/mp4">
+                </video>
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">BOP Challenge 2022 on Detection, Segmentation and Pose Estimation of Specific Rigid Objects <span class="badge bg-secondary mx-1">CVPR Workshops 2023</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Martin Sundermeyer, Tomas Hodan, Yann Labbe, Gu Wang, <span class="text-white">Eric Brachmann</span>, Bertram Drost, Carsten Rother, Jiri Matas</p>
+                  <p class="card-text mt-2">TL;DR: results of BOP challenge 2022, deep neural networks beat everything else </p>
+                  <a href="https://arxiv.org/abs/2302.13075" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://bop.felk.cvut.cz/challenges/bop-challenge-2022/" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://vimeo.com/showcase/9946695/video/768457697" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video 1</a>
+                  <a href="https://vimeo.com/showcase/9946695/video/768458355" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video 2</a>
+                </div>
+                <img src="assets/web_bop2022.png" class="card-img-bottom w-100">
+              </div>
+
+
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Map-Free Visual Relocalization: Metric Pose Relative to a Single Image <span class="badge bg-secondary mx-1">ECCV 2022</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Eduardo Arnold, Jamie Wynn, Sara Vicente, Guillermo Garcia-Hernando, Aron Monszpart, Victor Prisacariu, Daniyar Turmukhambetov, <span class="text-white">Eric Brachmann</span></p>
+                  <p class="card-text mt-2">TL;DR: only one mapping image and one query, dataset with multiple hundred outdoor scenes, benchmark and online leaderboard </p>
+                  <a href="https://arxiv.org/abs/2210.05494" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://storage.cloud.google.com/niantic-lon-static/research/map-free-reloc/MapFreeReloc-ECCV22-supplemental.pdf" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-file-pdf"></i> supplement</a>
+                  <a href="https://research.nianticlabs.com/mapfree-reloc-benchmark" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://github.com/nianticlabs/map-free-reloc" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                  <a href="https://research.nianticlabs.com/mapfree-reloc-benchmark/dataset" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-images"></i> dataset</a>
+                  <a href="https://storage.googleapis.com/niantic-lon-static/research/map-free-reloc/4029.mp4" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_mapfree.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Camera Pose Estimation and Localization with Active Audio Sensing <span class="badge bg-secondary mx-1">ECCV 2022</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Karren Yang, Michael Firman, <span class="text-white">Eric Brachmann</span>, Clement Godard</p>
+                  <p class="card-text mt-2">TL;DR: camera pose by echolocation, relative pose / absolute pose / image retrieval, vision is more accurate but sound helps when vision fails </p>
+                  <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136970266.pdf" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-file-pdf"></i> paper</a>
+                </div>
+                <img src="assets/web_audio.png" class="card-img-bottom w-100">
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Visual Camera Re-localization From RGB and RGB-D Images using DSAC <span class="badge bg-secondary mx-1">TPAMI 2021</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: DSAC*, higher accuracy than DSAC++ and full depth support, 28MB standard maps, 4MB tiny maps </p>
+                  <a href="https://arxiv.org/abs/2002.12324" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://github.com/vislearn/dsacstar" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_dsacstar.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Visual Camera Re-localization using Graph Neural Networks and Relative Pose Supervision <span class="badge bg-secondary mx-1">3DV 2021</span><span class="badge bg-secondary mx-1"><i class="fa-solid fa-star"></i> oral</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Mehmet Ozgur Turkoglu, <span class="text-white">Eric Brachmann</span>, Konrad Schindler, Gabriel Brostow, Aron Monszpart</p>
+                  <p class="card-text mt-2">TL;DR: relative pose regression, trained scene-agnostic, propagate information from kNN mapping images to query</p>
+                  <a href="https://arxiv.org/abs/2104.02538" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://github.com/nianticlabs/relpose-gnn" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_relposegnn.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">On the Limits of Pseudo Ground Truth in Visual Camera Re-localisation <span class="badge bg-secondary mx-1">ICCV 2021</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Martin Humenberger, Carsten Rother, Torsten Sattler</p>
+                  <p class="card-text mt-2">TL;DR: the choice of algorithm to generate reference poses, SfM or D-SLAM, has large impact on the ranking or relocalizers</p>
+                  <a href="https://arxiv.org/abs/2109.00524" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://github.com/tsattler/visloc_pseudo_gt_limitations" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                  <a href="https://storage.googleapis.com/niantic-lon-static/research/limits-of-pgt/iccv21_pgt_high.mp4" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_pseudogt.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Cuboids Revisited: Learning Robust 3D Shape Fitting to Single RGB Images <span class="badge bg-secondary mx-1">CVPR 2021</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Florian Kluger, Hanno Ackermann, <span class="text-white">Eric Brachmann</span>, Michael Ying Yang, Bodo Rosenhahn</p>
+                  <p class="card-text mt-2">TL;DR: sequentially fit cuboids to an estimated depth map, box representation of complex indoor scenes</p>
+                  <a href="https://arxiv.org/abs/2105.02047" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://github.com/fkluger/cuboids_revisited" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                  <a href="https://www.youtube.com/watch?v=rOJz3YUCjsA" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_cuboids.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">BOP Challenge 2020 on 6D Object Localization <span class="badge bg-secondary mx-1">ECCV Workshops 2020</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Tomas Hodan, Martin Sundermeyer, Bertram Drost, Yann Labbe, <span class="text-white">Eric Brachmann</span>, Frank Michel, Carsten Rother, Jiri Matas</p>
+                  <p class="card-text mt-2">TL;DR: results of BOP challenge 2020, deep neural networks on par with point pair features </p>
+                  <a href="https://arxiv.org/abs/2009.07378" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://bop.felk.cvut.cz/challenges/bop-challenge-2020/" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                </div>
+                <img src="assets/web_bop2020.png" class="card-img-bottom w-100">
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Reinforced Feature Points: Optimizing Feature Detection and Description for a High-Level Task <span class="badge bg-secondary mx-1">CVPR 2020</span><span class="badge bg-secondary mx-1"><i class="fa-solid fa-star"></i> oral</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Aritra Bhowmik, Stefan Gumhold, Carsten Rother, <span class="text-white">Eric Brachmann</span></p>
+                  <p class="card-text mt-2">TL;DR: refine SuperPoint end-to-end for relative pose estimation, gradients of feature matching wrt feature descriptors and key point heatmap</p>
+                  <a href="https://arxiv.org/abs/1912.00623" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://github.com/aritra0593/Reinforced-Feature-Points" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                  <a href="https://www.youtube.com/watch?v=_Zbbvr5jGhQ" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <img src="assets/web_refp.png" class="card-img-bottom w-100">
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">CONSAC: Robust Multi-Model Fitting by Conditional Sample Consensus <span class="badge bg-secondary mx-1">CVPR 2020</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Florian Kluger, <span class="text-white">Eric Brachmann</span>, Hanno Ackermann, Carsten Rother, Michael Yang, Bodo Rosenhahn</p>
+                  <p class="card-text mt-2">TL;DR: repeated application of NG-RANSAC to find parameters of N models, learned sequential search while updating internal state</p>
+                  <a href="https://arxiv.org/abs/2001.02643" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://github.com/fkluger/consac" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                  <a href="https://github.com/fkluger/nyu_vp" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-images"></i> dataset 1</a>
+                  <a href="https://github.com/fkluger/yud_plus" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-images"></i> dataset 2</a>
+                  <a href="https://www.youtube.com/watch?v=Fl_LXtC7A2E" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_consac.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Expert Sample Consensus Applied to Camera Re-Localization<span class="badge bg-secondary mx-1">ICCV 2019</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: ESAC, end-to-end learning of mixture-of-experts and RANSAC, large scale scene coordinate regression</p>
+                  <a href="https://arxiv.org/abs/1908.02484" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#ICCV19" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://github.com/vislearn/esac" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                  <a href="https://www.youtube.com/watch?v=tkEo98YgvBg" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <img src="assets/web_esac.jpg" class="card-img-bottom w-100">
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Neural-Guided RANSAC: Learning Where to Sample Model Hypothesis<span class="badge bg-secondary mx-1">ICCV 2019</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: NG-RANSAC + NG-DSAC, gradients of RANSAC-fitted model wrt quality of data points, applied to E/F matrix fitting, horizon line estimation and camera relocalization</p>
+                  <a href="https://arxiv.org/abs/1905.04132" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/neural-guided-ransac/" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://github.com/vislearn/ngransac/" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> F/E matrix code</a>
+                  <a href="https://github.com/vislearn/ngdsac_horizonC" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> horizon line code</a>
+                  <a href="https://github.com/vislearn/ngdsac_camreloc" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> relocalisation code</a>
+                  <a href="https://www.youtube.com/watch?v=ehaZ7FhDNS0" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_ngransac.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">iPose: Instance-Aware 6D Pose Estimation of Partly Occluded Objects<span class="badge bg-secondary mx-1">ACCV 2018</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Omid Hosseini Jafari, Siva Karthik Mustikovela, Karl Pertsch, <span class="text-white">Eric Brachmann</span>, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: instance segmentation + deep object coordinate prediction</p>
+                  <a href="https://arxiv.org/abs/1712.01924" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                </div>
+                <img src="assets/web_ipose.png" class="card-img-bottom w-100 bg-white">
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">BOP: Benchmark for 6D Object Pose Estimation<span class="badge bg-secondary mx-1">ECCV 2018</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Tomas Hodan, Frank Michel, <span class="text-white">Eric Brachmann</span>, Wadim Kehl, Anders Buch, Dirk Kraft, Bertram Drost, Joel Vidal, Stephan Ihrke , Xenophon Zabulis, Caner Sahin, Fabian Manhardt, Federico Tombari, Tae-Kyun Kim, Jiri Matas, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: de facto standard benchmark for instance pose estimation, unifying dataset formats and proposing evaluation metrics, ongoing competition with online leaderboard</p>
+                  <a href="https://arxiv.org/abs/1808.08319" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="http://bop.felk.cvut.cz/home/" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                </div>
+                <img src="assets/web_bop.png" class="card-img-bottom w-100 bg-white">
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Learning to Predict Dense Correspondences for 6D Pose Estimation <span class="badge bg-secondary mx-1"><i class="fa-solid fa-graduation-cap"></i> PhD thesis</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span></p>
+                  <p class="card-text mt-2">TL;DR: summary of my work prior to 2018, learning object and scene coordinate regression using random forests and neural networks</p>
+                  <a href="https://tud.qucosa.de/api/qucosa%3A31057/attachment/ATT-2/" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-file-pdf"></i> thesis</a>
+                </div>
+                <img src="assets/web_thesis.png" class="card-img-bottom w-100 bg-white">
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Learning Less is More - 6D Camera Localization via 3D Surface Regression <span class="badge bg-secondary mx-1">CVPR 2018</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: DSAC++, first time training scene coordinate regression without depth, differentiable PnP”</p>
+                  <a href="https://arxiv.org/abs/1611.05705" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#CVPR18" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://github.com/vislearn/LessMore" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                  <a href="https://www.youtube.com/watch?v=DjJFRTFEUq0" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_cvpr18.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">DSAC - Differentiable RANSAC for Camera Localization <span class="badge bg-secondary mx-1">CVPR 2017</span><span class="badge bg-secondary mx-1"><i class="fa-solid fa-star"></i> oral</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Alexander Krull, Sebastian Nowozin, Jamie Shotton, Frank Michel, Stefan Gumhold, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: gradients of a RANSAC-fitted model wrt the coordinates of the input points, using policy gradient on discrete hypothesis selection</p>
+                  <a href="https://arxiv.org/abs/1611.05705" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#DSAC" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://github.com/vislearn/DSACLine" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> toy code</a>
+                  <a href="https://github.com/cvlab-dresden/DSAC" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> relocalisation code</a>
+                  <a href="https://www.youtube.com/watch?v=YWSGq7CUSRA" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_dsac.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Global Hypothesis Generation for 6D Object Pose Estimation <span class="badge bg-secondary mx-1">CVPR 2017</span><span class="badge bg-secondary mx-1"><i class="fa-solid fa-star"></i> spotlight</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Frank Michel, Alexander Kirillov, <span class="text-white">Eric Brachmann</span>, Alexander Krull, Stefan Gumhold, Bogdan Savchynskyy, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: find pose inlier correspondences by optimizing the energy in a graphical model</p>
+                  <a href="https://arxiv.org/abs/1612.02287" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#GLOB" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                </div>
+                <img src="assets/web_global.png" class="card-img-bottom w-100 bg-white">
+              </div>
+
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">PoseAgent: Budget-Constrained 6D Object Pose Estimation via Reinforcement Learning <span class="badge bg-secondary mx-1">CVPR 2017</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Alexander Krull, <span class="text-white">Eric Brachmann</span>, Sebastian Nowozin, Frank Michel, Jamie Shotton, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: an RL agent chooses which RANSAC hypothesis to refine next</p>
+                  <a href="https://arxiv.org/abs/1612.03779" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#AGENT" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                </div>
+                <img src="assets/web_agent.png" class="card-img-bottom w-100 bg-white">
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Random Forests versus Neural Networks - What's Best for Camera Relocalization? <span class="badge bg-secondary mx-1">ICRA 2017</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Daniela Massiceti, Alexander Krull, <span class="text-white">Eric Brachmann</span>, Carsten Rother, Philip H.S. Torr</p>
+                  <p class="card-text mt-2">TL;DR: mapping of random forests to NNs for optimization, and back again for efficiency </p>
+                  <a href="https://arxiv.org/abs/1609.05797" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                </div>
+                <img src="assets/web_forestnet.png" class="card-img-bottom w-100 bg-white">
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Uncertainty-Driven 6D Pose Estimation of Objects and Scenes from a Single RGB Image <span class="badge bg-secondary mx-1">CVPR 2016</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Frank Michel, Alexander Krull, Michael Ying Yang, Stefan Gumhold, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: first object/scene coordinate regression system for RGB, predict correspondence distributions and search for max likelihood pose</p>
+                  <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Brachmann_Uncertainty-Driven_6D_Pose_CVPR_2016_paper.pdf" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-file-pdf"></i> paper</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/wp-content/uploads/2017/11/cvpr16_uncertainty_supp.pdf" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-file-pdf"></i> supplement</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#CVPR16" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://www.youtube.com/watch?v=CDEViOqclm0" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_cvpr16.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Learning Analysis-by-Synthesis for 6D Pose Estimation in RGB-D Images <span class="badge bg-secondary mx-1">ICCV 2015</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Alexander Krull, <span class="text-white">Eric Brachmann</span>, Frank Michel, Michael Ying Yang, Stefan Gumhold, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: substitute inlier counting pose score with a CNN that compares input image and renderings, trained via max likelihood</p>
+                  <a href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Krull_Learning_Analysis-by-Synthesis_for_ICCV_2015_paper.pdf" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-file-pdf"></i> paper</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/HTML/people/alexander_krull/publications/krull2015-supp.pdf" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-file-pdf"></i> supplement</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#ICCV15" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://www.youtube.com/watch?v=pvsrl-foX_k" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <img src="assets/web_analysis.png" class="card-img-bottom w-100 bg-white">
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Pose Estimation of Kinematic Chain Instances via Object Coordinate Regression <span class="badge bg-secondary mx-1">BMVC 2015</span><span class="badge bg-secondary mx-1"><i class="fa-solid fa-star"></i> oral</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Frank Michel, Alexander Krull, <span class="text-white">Eric Brachmann</span>, Michael Ying Yang, Stefan Gumhold, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: only n+2 correspondences are needed to estimate pose of n-jointed objects </p>
+                  <a href="http://www.bmva.org/bmvc/2015/papers/paper181/paper181.pdf" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-file-pdf"></i> paper</a>
+                  <a href="http://www.bmva.org/bmvc/2015/papers/paper181/index.html" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> conference page</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#BMVC15" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                </div>
+                <img src="assets/web_kinematic.png" class="card-img-bottom w-100 bg-white">
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">6-DOF Model Based Tracking via Object Coordinate Regression <span class="badge bg-secondary mx-1">ACCV 2014</span><span class="badge bg-secondary mx-1"><i class="fa-solid fa-star"></i> oral</span><span class="badge bg-secondary mx-1"><i class="fa-solid fa-award"></i> Honorable Mention Demo Award</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Alexander Krull, Frank Michel, <span class="text-white">Eric Brachmann</span>, Stefan Gumhold, Stephan Ihrke, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: combines RANSAC-based hypothesis sampling with particle filter for real-time pose tracking </p>
+                  <a href="https://link.springer.com/chapter/10.1007/978-3-319-16817-3_25" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-springer"></i> paper</a>
+                  <a href="https://link.springer.com/chapter/10.1007/978-3-319-16817-3_25#SupplementaryMaterial" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-springer"></i> supplement</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#ACCV14" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://www.youtube.com/watch?v=WSvfSNfyvJ0" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video 1</a>
+                  <a href="https://www.youtube.com/watch?v=SnEx8FsBEH8" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video 2</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_accv14.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Learning 6D Object Pose Estimation using 3D Object Coordinates <span class="badge bg-secondary mx-1">ECCV 2014</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Alexander Krull, Frank Michel, Stefan Gumhold, Jamie Shotton, Carsten Rother</p>
+                  <p class="card-text mt-2">TL;DR: introduces dense image-to-object correspondences as a learnable intermediate representation, introduced the LINEMOD-Occlusion dataset</p>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/wp-content/uploads/2017/11/eccv14_6dpose.pdf" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-file-pdf"></i> paper</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/wp-content/uploads/2017/11/eccv14_6dpose_supp.pdf" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-file-pdf"></i> supplement</a>
+                  <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#ECCV14" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://bop.felk.cvut.cz/datasets/#LM-O" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-images"></i> dataset</a>
+                  <a href="https://www.youtube.com/watch?v=yk1m3DsH4dA" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video 1</a>
+                  <a href="https://www.youtube.com/watch?v=TKuJr3EIT-8" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video 2</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_eccv14.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Feature Propagation on Image Webs for Enhanced Image Retrieval <span class="badge bg-secondary mx-1">ICMR 2013</span><span class="badge bg-secondary mx-1"><i class="fa-solid fa-star"></i> oral</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Marcel Spehr, Stefan Gumhold</p>
+                  <p class="card-text mt-2">TL;DR: propagate visual words along image web edges to make a BoW image descriptors more robust</p>
+                  <a href="https://dl.acm.org/doi/10.1145/2461466.2461472" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-acm"></i> paper</a>
+                </div>
+                <img src="assets/web_web.png" class="card-img-bottom w-100 bg-white">
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Simplified Authentication and Authorization for RESTful Services in Trusted Environments <span class="badge bg-secondary mx-1">ESOCC 2012</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Gero Dittmann, Klaus-Dieter Schubert</p>
+                  <p class="card-text mt-2">TL;DR: an authentication scheme for company intranets where you may want to trade security for simplicity</p>
+                  <a href="https://link.springer.com/chapter/10.1007/978-3-642-33427-6_21" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-springer"></i> paper</a>
+                </div>
+              </div>
+
+
+
+            </div>
+
+            <div class="w-100 text-end">
+              <p><small>
+                Feel free to use this website as <a href="https://github.com/ebrach/ebrach.github.io"> template</a>.
+                Inspired by Jon Barron's iconic <a href="https://jonbarron.info/">template</a>.
+              </small></p>
+
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+        <div class="col-sm-0 col-md-2"></div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <script>
+            window.addEventListener('load', videoScroll);
+            window.addEventListener('scroll', videoScroll);
+
+            function videoScroll() {
+
+                if ( document.querySelectorAll('video[autoplay]').length > 0) {
+
+                    var windowHeight = window.innerHeight,
+                    videoEl = document.querySelectorAll('video[autoplay]');
+
+                    for (var i = 0; i < videoEl.length; i++) {
+
+                        var thisVideoEl = videoEl[i],
+                            videoHeight = thisVideoEl.clientHeight,
+                            videoClientRect = thisVideoEl.getBoundingClientRect().top;
+
+                        if ( (thisVideoEl.parentNode.classList.contains('carousel-item') && thisVideoEl.parentNode.classList.contains('active')) || (thisVideoEl.parentNode.nodeName === 'DIV' && !thisVideoEl.parentNode.classList.contains('carousel-item') )) {
+                            if ( videoClientRect <= ( (windowHeight) - (videoHeight*.8) ) && videoClientRect >= ( 0 - ( videoHeight*.2 ) ) ) {
+                                thisVideoEl.play();
+                            } else {
+                                thisVideoEl.pause();
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+  </body>
 </html>

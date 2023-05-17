@@ -1,0 +1,63 @@
+body {
+  background-color: black;
+  color: lightgray;
+}
+
+h1 {
+  color: white;
+  font-size: x-large;
+}
+
+a {
+  color: #0dcaf0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff2491;
+}
+
+.card-header {
+  color: white;
+  font-weight: bold;
+}
+
+.text-highlight {
+  color: #ff2491;
+  font-weight: normal;
+}
+
+.card-body {
+  background-color: black;
+}
+
+.btn {
+  color: #0dcaf0;
+}
+
+.btn:hover {
+  color: #ff2491;
+}
+
+.nav-tabs {
+  border-bottom-color: #606060;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+  background-color: #212428;
+  color: lightgray;
+  border-color: #606060;
+}
+
+.nav-tabs .nav-item .nav-link {
+  color: #0dcaf0;
+}
+
+.nav-tabs .nav-item .nav-link:hover {
+  border-color: #606060;
+  color: #ff2491;
+}
+
+.nav-tabs .nav-item .nav-link.active:hover {
+  color: lightgray;
+}
