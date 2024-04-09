@@ -35,15 +35,15 @@
             matching.
           </p>
           <p>
-            I publish my research in the top conferences in computer vision where I am also an active reviewer with
+            I publish my research in the top conferences in computer vision where I am also active as area chair and reviewer with
             several outstanding reviewer mentions. I co-organized several tutorials and workshops on visual
             relocalisation and object pose estimation.
           </p>
           <a href="mailto:ericbrachmann@gmail.com" class="btn btn-black w-100 text-start ps-0"><i class="fa-solid fa-envelope"></i> E-Mail</a>
-          <a href="https://scholar.google.de/citations?user=cAIshsYAAAAJ" class="btn btn-black w-100 text-start ps-0"><i class="ai ai-google-scholar"></i> Google Scholar</a>
-          <a href="https://twitter.com/eric_brachmann" class="btn btn-black w-100 text-start ps-0"><i class="fa-brands fa-twitter"></i> Twitter</a>
-          <a href="https://www.linkedin.com/in/eric-brachmann/" class="btn btn-black w-100 text-start ps-0"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-          <a href="assets/cv_english.pdf" class="btn btn-black w-100 text-start ps-0"><i class="fa-solid fa-file-pdf"></i> CV</a>
+          <a href="https://scholar.google.de/citations?user=cAIshsYAAAAJ" target="_blank" class="btn btn-black w-100 text-start ps-0"><i class="ai ai-google-scholar"></i> Google Scholar</a>
+          <a href="https://twitter.com/eric_brachmann" target="_blank" class="btn btn-black w-100 text-start ps-0"><i class="fa-brands fa-twitter"></i> Twitter</a>
+          <a href="https://www.linkedin.com/in/eric-brachmann/" target="_blank" class="btn btn-black w-100 text-start ps-0"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="assets/cv_english.pdf" target="_blank" class="btn btn-black w-100 text-start ps-0"><i class="fa-solid fa-file-pdf"></i> CV</a>
         </div>
         <div class="col-sm-12 col-md-6">
 
@@ -57,6 +57,20 @@
           </ul>
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="highlights-tab-pane" role="tabpanel" aria-labelledby="highlights-tab" tabindex="0">
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Matching 2D Images in 3D: Metric Relative Pose from Metric Correspondences <span class="badge bg-secondary mx-1">CVPR 2024</span><span class="badge bg-secondary mx-1"><i class="fa-solid fa-star"></i> oral</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Axel Barroso-Laguna, Sowmya Munukutla, Victor Adrian Prisacariu, <span class="text-white">Eric Brachmann</span></p>
+                  <p class="card-text mt-2">TL;DR: MicKey, a method that regresses and matches scale-metric 3D key points, trained end-to-end using differentiable RANSAC</p>
+                  <a href="https://arxiv.org/abs/" class="btn btn-dark btn-sm" target="_blank"><i class="ai ai-arxiv"></i>&nbsp;&nbsp;arXiv</a>
+                  <a href="https://nianticlabs.github.io/mickey/" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://github.com/nianticlabs/mickey" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i>&nbsp;&nbsp;code</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_mickey.mp4" type="video/mp4">
+                </video>
+              </div>
 
               <div class="card text-white bg-dark mb-4 border-3">
                 <div class="card-header">Accelerated Coordinate Encoding: Learning to Relocalize in Minutes using RGB and Poses <span class="badge bg-secondary mx-1">CVPR 2023</span><span class="badge bg-secondary mx-1"><i class="fa-solid fa-star"></i> highlight</span></div>
@@ -166,7 +180,7 @@
                 <div class="card-header">Learning Less is More - 6D Camera Localization via 3D Surface Regression <span class="badge bg-secondary mx-1">CVPR 2018</span></div>
                 <div class="card-body">
                   <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Carsten Rother</p>
-                  <p class="card-text mt-2">TL;DR: DSAC++, first time training scene coordinate regression without depth, differentiable PnP”</p>
+                  <p class="card-text mt-2">TL;DR: DSAC++, first time training scene coordinate regression without depth, differentiable PnP</p>
                   <a href="https://arxiv.org/abs/1611.05705" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
                   <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#CVPR18" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
                   <a href="https://github.com/vislearn/LessMore" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
@@ -212,6 +226,31 @@
 
             </div>
             <div class="tab-pane fade" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">BOP Challenge 2023 on Detection, Segmentation and Pose Estimation of Seen and Unseen Rigid Objects <span class="badge bg-secondary mx-1">CVPR Workshops 2024</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Tomas Hodan, Martin Sundermeyer, Yann Labbe, Van Nguyen Nguyen, Gu Wang, <span class="text-white">Eric Brachmann</span>, Bertram Drost, Vincent Lepetit, Carsten Rother, Jiri Matas</p>
+                  <p class="card-text mt-2">TL;DR: results of BOP challenge 2023, accuracy is excellent if objects are known in advance, for unseen objects, still good but slow </p>
+                  <a href="https://arxiv.org/abs/2403.09799" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://bop.felk.cvut.cz/challenges/bop-challenge-2023/" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
+                  <a href="https://www.youtube.com/watch?v=PcDszFANcDQ" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-youtube"></i> video</a>
+                </div>
+                <img src="assets/web_bop2023.jpeg" class="card-img-bottom w-100">
+              </div>
+
+              <div class="card text-white bg-dark mb-4 border-3">
+                <div class="card-header">Robust Shape Fitting for 3D Scene Abstraction <span class="badge bg-secondary mx-1">TPAMI 2024</span></div>
+                <div class="card-body">
+                  <p class="card-subtitle text-muted">Florian Kluger, <span class="text-white">Eric Brachmann</span>, Michael Ying Yang, Bodo Rosenhahn</p>
+                  <p class="card-text mt-2">TL;DR: extended version of "Cuboids Revisited" (CVPR 2021), a neural solver fitting cuboids to 3D points leads to better scene abstractions and faster runtime</p>
+                  <a href="https://arxiv.org/abs/2403.10452" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
+                  <a href="https://github.com/fkluger/cuboids_revisited" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
+                </div>
+                <video muted autoplay loop class="card-img-bottom w-100">
+                  <source src="assets/web_cuboids.mp4" type="video/mp4">
+                </video>
+              </div>
 
               <div class="card text-white bg-dark mb-4 border-3">
                 <div class="card-header">Accelerated Coordinate Encoding: Learning to Relocalize in Minutes using RGB and Poses <span class="badge bg-secondary mx-1">CVPR 2023</span><span class="badge bg-secondary mx-1"><i class="fa-solid fa-star"></i> highlight</span></div>
@@ -444,7 +483,7 @@
                 <div class="card-header">Learning Less is More - 6D Camera Localization via 3D Surface Regression <span class="badge bg-secondary mx-1">CVPR 2018</span></div>
                 <div class="card-body">
                   <p class="card-subtitle text-muted"><span class="text-white">Eric Brachmann</span>, Carsten Rother</p>
-                  <p class="card-text mt-2">TL;DR: DSAC++, first time training scene coordinate regression without depth, differentiable PnP”</p>
+                  <p class="card-text mt-2">TL;DR: DSAC++, first time training scene coordinate regression without depth, differentiable PnP</p>
                   <a href="https://arxiv.org/abs/1611.05705" target="_blank" class="btn btn-dark btn-sm"><i class="ai ai-arxiv"></i> arXiv</a>
                   <a href="https://hci.iwr.uni-heidelberg.de/vislearn/research/scene-understanding/pose-estimation/#CVPR18" target="_blank" class="btn btn-dark btn-sm"><i class="fa-solid fa-house"></i> project page</a>
                   <a href="https://github.com/vislearn/LessMore" target="_blank" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> code</a>
