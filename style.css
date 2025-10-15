@@ -61,3 +61,8 @@ a:hover {
 .nav-tabs .nav-item .nav-link.active:hover {
   color: lightgray;
 }
+
+.author-highlight {
+  color: #a2a2a2;
+  font-weight: bold;
+}
