@@ -636,8 +636,8 @@
         let mediaHtml = "";
         if (paper.media) {
           if (paper.media.type === "video") {
-            mediaHtml = `<video muted autoplay loop class="card-img-bottom w-100">
-                  <source src="${paper.media.src}" type="video/mp4">
+            mediaHtml = `<video muted autoplay loop preload="none" loading="lazy" class="card-img-bottom w-100">
+                  <source data-src="${paper.media.src}" type="video/mp4">
                 </video>`;
           } else {
             const extraClass = paper.media.bgWhite ? " bg-white" : "";
@@ -670,6 +670,16 @@
         <script>
             window.addEventListener('load', videoScroll);
             window.addEventListener('scroll', videoScroll);
+            document.addEventListener('shown.bs.tab', videoScroll);
+
+            function loadVideo(video) {
+                var source = video.querySelector('source[data-src]');
+                if (source) {
+                    source.src = source.getAttribute('data-src');
+                    source.removeAttribute('data-src');
+                    video.load();
+                }
+            }
 
             function videoScroll() {
 
@@ -683,6 +693,10 @@
                         var thisVideoEl = videoEl[i],
                             videoHeight = thisVideoEl.clientHeight,
                             videoClientRect = thisVideoEl.getBoundingClientRect().top;
+
+                        if (videoClientRect <= windowHeight * 2.5 && videoClientRect >= -videoHeight - windowHeight) {
+                            loadVideo(thisVideoEl);
+                        }
 
                         if ( (thisVideoEl.parentNode.classList.contains('carousel-item') && thisVideoEl.parentNode.classList.contains('active')) || (thisVideoEl.parentNode.nodeName === 'DIV' && !thisVideoEl.parentNode.classList.contains('carousel-item') )) {
                             if ( videoClientRect <= ( (windowHeight) - (videoHeight*.8) ) && videoClientRect >= ( 0 - ( videoHeight*.2 ) ) ) {
