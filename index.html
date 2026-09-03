@@ -77,6 +77,7 @@
 
     <script>
       const coauthors = {
+        "Alan Savio Paul": "https://www.linkedin.com/in/alan-savio-paul",
         "Alexander Kirillov": "https://alexander-kirillov.github.io/",
         "Alexander Krull": "https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/krull-alexander",
         "Anas Gouda": "https://anasibrahim.github.io/",
@@ -106,6 +107,7 @@
         "Hyeontae Son": "https://scholar.google.com/citations?user=krYfI4AAAAAJ&hl=en",
         "Jamie Shotton": "https://jamie.shotton.org/",
         "Jamie Wynn": "https://scholar.google.com/citations?user=ASP-uu4AAAAJ&hl=en",
+        "Javier Tirado-Garín": "https://javrtg.github.io/",
         "Jiri Matas": "https://cmp.felk.cvut.cz/~matas/",
         "Joel Vidal": "https://www.researchgate.net/profile/Joel-Vidal-3",
         "Jonathan Tremblay": "https://research.nvidia.com/person/jonathan-tremblay",
@@ -163,6 +165,20 @@
       }
 
       const papers = [
+        {
+          title: "AutoCompass: Accurate Visual Localization on Public Maps by Learning from Weak Labels",
+          venue: "ECCV 2026",
+          awards: [],
+          authors: ["Javier Tirado-Garín", "Alan Savio Paul", "Shuai Chen", "Axel Barroso-Laguna", "Tommaso Cavallari", "Daniyar Turmukhambetov", "Victor Adrian Prisacariu", "Eric Brachmann"],
+          tldr: "match a 2D image against OpenStreetMap for a 3DoF pose estimate, trained from images+GPS only, optionally leverages relative image poses during training for highest accuracy.",
+          links: [
+            {icon: "ai ai-arxiv", label: "arXiv", url: "https://arxiv.org/abs/2609.02798"},
+            {icon: "fa-solid fa-house", label: "project page", url: "https://nianticspatial.github.io/autocompass/"},
+            {icon: "fa-brands fa-youtube", label: "video", url: "https://www.youtube.com/watch?v=hmUF6p3C66M"}
+          ],
+          media: {type: "video", src: "assets/web_autocompass.mp4"},
+          highlight: false
+        },
         {
           title: "A Scene is Worth a Thousand Features: Feed-Forward Camera Localization from a Collection of Image Features",
           venue: "ICLR 2026",
